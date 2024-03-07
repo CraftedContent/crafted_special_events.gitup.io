@@ -1,1 +1,1 @@
-# crafted_special_events.gitup.io
+special_events.gitup.io
