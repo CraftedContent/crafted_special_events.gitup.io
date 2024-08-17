@@ -8,43 +8,96 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f9f9f9;
             color: #333;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: -1;
         }
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #fff;
+            position: relative;
+            width: 100%;
+            height: 100%;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3, h4, p {
-            margin: 0 0 15px;
+            box-sizing: border-box;
         }
         h1 {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
             font-size: 2em;
             text-align: center;
             color: #0044cc;
-        }
-        h2 {
-            font-size: 1.5em;
-            color: #333;
-        }
-        .schedule, .speakers {
-            margin: 20px 0;
-        }
-        .speaker {
-            margin: 15px 0;
-        }
-        .speaker h3 {
             margin: 0;
-            color: #0044cc;
+        }
+        .date-location {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2em;
+            text-align: center;
+            margin: 0;
+        }
+        .solas {
+            position: absolute;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .schedule {
+            position: absolute;
+            top: 250px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            text-align: left;
+            font-size: 1em;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .speakers {
+            position: absolute;
+            top: 450px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .speaker-bios {
+            position: absolute;
+            top: 550px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin: 0;
         }
         .footer {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             text-align: center;
-            margin-top: 40px;
             font-size: 0.9em;
             color: #666;
         }
@@ -56,47 +109,50 @@
 </head>
 <body>
 
+<div class="background"></div>
+
 <div class="container">
     <h1>re-Formation Conference 2025</h1>
-    <p><strong>January 17-19</strong> || The Salem Center</p>
+    <p class="date-location">January 17-19 || The Salem Center</p>
 
-    <h2>Centered on the ‘5 Solas’ of the Reformation</h2>
-    <div class="schedule">
-        <h3>Conference Schedule</h3>
+    <div class="solas">
+        <p>Centered on the ‘5 Solas’ of the Reformation</p>
         <p><strong>Sola Scriptura</strong> - Our Final Authority</p>
-        <p>Friday / 7:30 PM</p>
         <p><strong>Sola Gratia</strong> - Our Only Cause</p>
-        <p>Saturday / 9:30 AM</p>
         <p><strong>Solus Christus</strong> - Our Only Mediator</p>
-        <p>Saturday / 10:45 AM</p>
         <p><strong>Sola Fide</strong> - Our Only Instrument</p>
-        <p>Saturday / 1:00 PM</p>
         <p><strong>Soli Deo Gloria</strong> - Our Only Goal</p>
-        <p>Saturday / 6:45 PM</p>
+    </div>
+
+    <div class="schedule">
+        <p><strong>Conference Schedule</strong></p>
+        <p>Friday / 7:30 PM - Sola Scriptura</p>
+        <p>Saturday / 9:30 AM - Sola Gratia</p>
+        <p>Saturday / 10:45 AM - Solus Christus</p>
+        <p>Saturday / 1:00 PM - Sola Fide</p>
+        <p>Saturday / 6:45 PM - Soli Deo Gloria</p>
     </div>
 
     <div class="speakers">
-        <h3>The Speaker Lineup</h3>
-        <div class="speaker">
-            <h4>Michael Horton</h4>
-            <p>Professor of Systematic Theology, Westminster Seminary, California</p>
-        </div>
-        <div class="speaker">
-            <h4>R. Scott Clark</h4>
-            <p>Professor of Church History, Westminster Seminary, California</p>
-        </div>
-        <div class="speaker">
-            <h4>Rev. Canon Dr. Ashley Null</h4>
-            <p>Director, Wittenburg Center for Reformation Studies</p>
-        </div>
-        <div class="speaker">
-            <h4>Jonathan Linebaugh</h4>
-            <p>Author, Scholar, Historian</p>
-        </div>
-        <div class="speaker">
-            <h4>Dorthea Wendebourg</h4>
-            <p>Professor, Theological Faculty, Humboldt University, Berlin</p>
-        </div>
+        <p><strong>The Speaker Lineup</strong></p>
+        <p>Michael Horton - Professor of Systematic Theology, Westminster Seminary, California</p>
+        <p>R. Scott Clark - Professor of Church History, Westminster Seminary, California</p>
+        <p>Rev. Canon Dr. Ashley Null - Director, Wittenburg Center for Reformation Studies</p>
+        <p>Jonathan Linebaugh - Author, Scholar, Historian</p>
+        <p>Dorthea Wendebourg - Professor, Theological Faculty, Humboldt University, Berlin</p>
+    </div>
+
+    <div class="speaker-bios">
+        <p><strong>Speaker Bios</strong></p>
+        <p><strong>Michael S. Horton</strong> is a prominent American theologian and the J. Gresham Machen Professor of Systematic Theology and Apologetics at Westminster Seminary California. Known for his contributions to Reformed theology, Horton’s work emphasizes the doctrines of grace and the centrality of Christ in salvation.</p>
+
+        <p><strong>R. Scott Clark</strong> is a distinguished American theologian and professor of Church History and Historical Theology at Westminster Seminary California. He specializes in Reformed theology, particularly the Reformed confessions and the theology of John Calvin.</p>
+
+        <p><strong>Dorothea Wendebourg</strong> is a renowned German theologian and church historian, known for her expertise in Reformation history and ecumenical theology. She serves as a professor of Church History at Humboldt University in Berlin.</p>
+
+        <p><strong>Dr. Ashley Null</strong> is a distinguished theologian and church historian, specializing in the English Reformation and the theology of Thomas Cranmer.</p>
+
+        <p><strong>Jonathan Linebaugh</strong> is a respected theologian and New Testament scholar, specializing in Pauline studies and Second Temple Judaism. He is an Associate Professor of New Testament at Cambridge University.</p>
     </div>
 
     <div class="footer">
